@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import './assets/fonts/fonts.scss';
+@import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
+@import 'assets/css/datepickerNavicu.scss';
+
+// Varibles
+$nvc-violeta: #783CBD;
+$nvc-amarillo: #F2AF00;
+$nvc-rojo-brillante: #E73D50;
+$nvc-magenta: #B42371;
+$nvc-morado: #54274E;
+$nvc-morado-oscuro: #391860;
+
+// Tipos de fuentes
+.LatoBlack{ font-family: LatoBlack }
+.LatoBlackItalic{ font-family: LatoBlackItalic }
+
+.LatoBold{ font-family: LatoBold }
+.LatoBoldItalic{ font-family: LatoBoldItalic }
+
+.LatoHairline{ font-family: LatoHairline }
+.LatoHairlineItalic{ font-family: LatoHairlineItalic }
+
+.LatoHeavy{ font-family: LatoHeavy }
+.LatoHeavyItalic{ font-family: LatoHeavyItalic }
+
+.LatoLight{ font-family: LatoLight }
+.LatoLightItalic{ font-family: LatoLightItalic }
+
+.LatoItalic{ font-family: LatoItalic }
+.LatoThinItalic{ font-family: LatoThinItalic }
+.LatoRegular{ font-family: LatoRegular }
+
+.LatoSemiBold{font-family: LatoSemiBold}
+
+.LatoSemiBoldItalic{font-family: LatoSemiBoldItali}
+
+// Fondos
+.bg-nvc-violeta{
+    background-color: $nvc-violeta;
+}
+.bg-nvc-amarillo {
+    background-color: $nvc-amarillo;
+}
+.bg-nvc-rojo-brillante {
+    background-color: $nvc-rojo-brillante;
+}
+.bg-nvc-magenta {
+    background-color: $nvc-magenta;
+}
+.bg-nvc-morado {
+    background-color: $nvc-morado;
+}
+.bg-nvc-morado-oscuro {
+  background-color: $nvc-morado-oscuro;
+}
+
+// Colores de fuentes
+.fc-violeta{
+  color: $nvc-violeta;
+}
+.fc-amarillo {
+  color: $nvc-amarillo;
+}
+.fc-rojo-brillante {
+  color: $nvc-rojo-brillante;
+}
+.fc-magenta {
+  color: $nvc-magenta;
+}
+.fc-morado {
+  color: $nvc-morado;
+}
+.fc-morado-oscuro {
+  color: $nvc-morado-oscuro;
+}
+
+// Tamaños de fuentes
+.fs-10 { font-size: 10px }
+.fs-11 { font-size: 11px }
+.fs-12 { font-size: 12px }
+.fs-13 { font-size: 13px }
+.fs-14 { font-size: 14px }
+.fs-15 { font-size: 15px }
+.fs-16 { font-size: 16px }
+.fs-17 { font-size: 17px }
+.fs-18 { font-size: 18px }
+.fs-19 { font-size: 19px }
+.fs-20 { font-size: 20px }
+.fs-21 { font-size: 21px }
+.fs-22 { font-size: 22px }
+.fs-23 { font-size: 23px }
+.fs-24 { font-size: 24px }
+
+// Tamaños personalizados
+.w-70{ min-width: 70% }
+.w-60{ min-width: 60% }
+.w-40{ min-width: 40% }
+.w-33-3{ min-width: 33.333333333% }
+.w-33{ min-width: 33% }
+.w-30{ min-width: 30% }
+.w-28{ min-width: 28% }
+.w-25{ min-width: 25% }
+.w-18{ min-width: 18% }
+.w-15{ min-width: 15% }
+
+// Configuraciones generales
+.cursor{
+  cursor: pointer;
+}
+.justify-content-evenly{
+  justify-content: space-evenly !important
+}
+.nvc-input {
+  border: 1px solid #EDEDED;
+  border-radius: 4px;
+  height: 2.3rem;
+  color: #C4C4C4;
+  padding: 0 .5rem;
+  background-color: #ffffff;
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,135 @@
+
+	<!--- Slider Index -->
+	<div class="nvc-carousel">
+		<div class="nvc-carousel__serachdHome">
+			<app-search></app-search>
+		</div>
+		<div class="nvc-carousel__HomeVideo" *ngIf="backgroundMode==0">
+			<video  preload loop muted autoplay>
+            	<source src="/assets/img/Home/videos/videoBackgroundboleteria.mp4" type="video/mp4">
+        	</video>
+		</div>
+		<div class="nvc-carousel__HomeBackground" *ngIf="backgroundMode==1">
+			<img src="/assets/img/Home/static/principal-plane-new.jpg">
+		</div>
+        <div class="nvc-carousel__home--youtube mx-auto text-center">
+			<h3 class="youtube">
+			    <a href="https://www.youtube.com/channel/UCgusN-AvP1nas0qnPji7cLA" target="_blank">
+			        Visita nuestro canal
+			        <img src="/assets/img/Home/carousel/youtube.svg">
+			    </a>
+			</h3>
+		</div>
+	</div>
+	<!--- Ofertas recomendadas para ti -->
+	<div class="nvc-offers">
+		<div class="nvc-offers__global nvc-container">
+			<div class="nvc-offers__global--text-content">
+				<h2>Increíbles destinos recomendados</h2>
+        		<hr>
+			</div>
+			<div class="nvc-offers__global--detail-one row pt-lg-4">
+				<!-- columna 1 -->
+				<div class="photo-one col-lg-3" *ngFor="let ofert of oferts">
+					<a href="https://www.navicu.com/VE/hesperia-eden-club" target="_blank">
+		                <img src="{{ofert.url}}">
+		                <div class="photo-infor">
+		                	<hr>
+		                    <h3>{{ ofert.name }}</h3>
+                        	<h4>{{ ofert.price }}</h4>
+		                </div>
+		            </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Destinos populares -->
+	<div class="nvc-destinies">
+		<div class="nvc-destinies__contexto">
+			<h2>Destinos populares</h2>
+    		<hr>
+		</div>
+		<div class="">
+			<div class="nvc-destinies__fade">
+		        <div class="nvc-destinies__fade--parallax">
+		            <div class="items">
+		                <a href="https://www.navicu.com/blog/" target="_blank" id="romantic">
+		                    <div class="bg-slider"></div>
+		                </a>
+		            </div>
+		        </div>
+		    </div>
+			<div class="nvc-destinies__contenedor col-lg-4">
+				<div class="nvc-destinies__contenedor--etiq">
+					<div class="ind1-text">
+						<h2>Viaja a nuestro blog</h2>
+	            		<h3>¡Cliquea para conocer lugares increíbles!</h3>
+					</div>
+					<div class="carousel pt-lg-3">
+						<div class="legued">
+							<a href="">
+								<img src="/assets/img/Home/destinies/urbancity.png">
+							</a>
+							<a href="">
+								<img src="/assets/img/Home/destinies/mountain.png">
+							</a>
+							<a href="">
+								<img src="/assets/img/Home/destinies/beach.png">
+							</a>
+							<a href="">
+								<img src="/assets/img/Home/destinies/romantic.png">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Galerias de videos -->
+	<div class="nvc-videos text-center">
+		<div class="nvc-videos__header">
+			<h2>
+				Vivir la experiencia <span> navicu.com</span>
+			</h2>
+			<img src="/assets/img/Home/experiencias/arrow-down-light.svg">
+		</div>
+		<div class="row no-gutters">
+			<div class="nvc-videos__views-one col-lg-4">
+				<div class="nvc-videos__views-one--data1">
+	                <a (click)="showVideosModal(1)">
+	                    <img src="/assets/img/Home/videos/Margarita.jpg">
+	                        <div class="text-play mx-auto text-center w-100">
+	                        	<img src="/assets/img/Home/videos/icon_play.png">
+		                            <h2>Isla Margarita</h2>
+		                            <h3>Experiencia familiar en la increíble Isla de Margarita</h3>
+	                        </div>
+	                </a>
+	            </div>
+			</div>
+			<div class="nvc-videos__views-one col-lg-4">
+				<div class="nvc-videos__views-one--data1">
+	                <a (click)="showVideosModal(2)">
+	                    <img src="/assets/img/Home/videos/Galipán.jpg">
+	                        <div class="text-play mx-auto text-center w-100">
+	                        	<img src="/assets/img/Home/videos/icon_play.png">
+		                            <h2>Galipán</h2>
+                                	<h3>Aventuras incomparables por vivir en Galipán</h3>
+	                        </div>
+	                </a>
+	            </div>
+			</div>
+			<div class="nvc-videos__views-one col-lg-4">
+				<div class="nvc-videos__views-one--data1">
+	                <a (click)="showVideosModal(3)">
+	                    <img src="/assets/img/Home/videos/Colonia.jpg">
+	                        <div class="text-play mx-auto text-center w-100">
+	                        	<img src="/assets/img/Home/videos/icon_play.png">
+		                            <h2>Colonia Tovar</h2>
+                                	<h3>Romance en cada esquina con el mejor clima en la Colonia Tovar</h3>
+	                        </div>
+	                </a>
+	            </div>
+			</div>
+		</div>
+	</div>
+<app-videos *ngIf="modalVideos" [urlVideo]="urlVideo"></app-videos> 

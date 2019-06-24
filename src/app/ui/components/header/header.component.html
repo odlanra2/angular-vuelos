@@ -1,0 +1,64 @@
+<div class="d-flex bg-nvc-violeta w-100 px-5 py-4 justify-content-between">
+    <div class="ml-5 col">
+        <img [src]="'/assets/img/Home/header/logo-navicu.png'" class="img-fluid" alt="">
+    </div>
+
+    <div class="d-flex justify-content-end mr-5 align-items-center ">
+        <div class=" LatoBold fs-13 mr-5 position-relative cursor" (click)="showCoins($event)">
+            <span class="text-white">Moneda</span>
+            <span class="fn-select px-3 py-2 " [ngClass]="{'open-conins': coins}"> VES </span>
+
+            <div class="coins px-4 rounded-bottom rounded-left py-2" *ngIf="coins">
+                <ul class="row p-0 m-0">
+                    <li *ngFor="let item of listCoins; let i = index" class="col-4 px-0 py-2 border-bottom" (click)="selctCoin($event, i)">
+                        <span class="mr-2"> {{ item.code }} </span> <span class=""> {{ item.name }} </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="d-flex fs-13 text-white align-items-center">
+            <span class="LatoBold">Registrarme</span>
+            <span class="px-3">|</span>
+
+            <div class="arrow-bottom btn-group" dropdown [autoClose]="true">
+                <button id="button-login" dropdownToggle type="button" class="btn btn-dropdown dropdown-toggle d-flex align-content-center" aria-controls="dropdown-login">
+                <span>Ingresar</span>&nbsp;&nbsp;<img [src]="'/assets/img/Home/header/user-desk.png'" alt="" class="pl-1 "></button>
+
+                <ul id="dropdown-login" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-login" (click)="preventCloseLogin($event)">
+                    <form [formGroup]=" loginForm " (ngSubmit)="onSubmit() " class="px-4 pb-2 pt-2 ">
+                        <span class="welcome LatoLight ">Bienvenido</span> <br>
+                        <a class="welcome LatoBold " href="# "><b>¿Ya tienes una cuenta?</b></a>
+                        <div class="form-group d-flex align-items-center ">
+                            <img [src]=" '/assets/img/Home/login/email.svg' " class="login-img ">
+                            <input formControlName="email" type="email " class="form-control login-input" id="email" placeholder="Correo">
+                        </div>
+                        <div class=" form-group d-flex align-items-center ">
+                            <img [src]=" '/assets/img/Home/login/pass.svg' " class="login-img ">
+                            <input formControlName="pass" type="password" class="form-control login-input" id="password" placeholder="Contraseña">
+                        </div>
+                        <a class="forgot-pass " href="# ">¿Olvidaste tu contraseña?</a>
+                        <button type="submit " class="btn btn-block btn-login ">Ingresar</button>
+                    </form>
+
+                    <div class="d-flex justify-content-center ">
+                        <div *ngIf="submitted && loginForm.controls.email.errors || submitted && loginForm.controls.pass.errors " class="error-login ">
+                            <span>¡Ooops! Tu usuario o contraseña son inválidos, intenta nuevamente.</span>
+                        </div>
+                    </div>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="nvc-ribbon d-flex ">
+    <div class="w-25 h-100 bg-nvc-amarillo "></div>
+    <div class="w-25 h-100 bg-nvc-rojo-brillante "></div>
+    <div class="w-25 h-100 bg-nvc-magenta "></div>
+    <div class="w-25 h-100 bg-nvc-morado "></div>
+</div>

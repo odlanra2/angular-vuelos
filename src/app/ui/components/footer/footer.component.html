@@ -1,0 +1,130 @@
+<div class="nvc-destination">
+	<div class="nvc-container row">
+        <div class="nvc-destination__generaltags col-lg-4" *ngFor="let destinations of destinations">
+            <div class="nvc-destination__generaltags--nvc-tags">
+                <h4>
+                	<img src="{{ destinations.url }}">
+                	{{ destinations.type }}
+                </h4>
+                <!--- Tags -->
+                <ul *ngFor="let locations of destinations.locations">
+                    <li>
+                        <a href="{{ locations.url }}">
+                            {{ locations.name}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+<div class="nvc-footer">
+	<div class="nvc-footer__top">
+		<div class="nvc-container row">
+			<!--- About-Us -->
+			<div class="nvc-footer__top--abouts col-lg-3">
+				<div class="contend-one">
+					<img src="/assets/img/Home/footer/navicon.svg">
+					<span>Conocenos</span>
+					<p>
+						Te invitamos a conocer miles de destinos con la mejor plataforma de viajes ¡Los mejores paquetes del mercado!
+					</p>	
+				</div>
+				<div class="contend-two d-flex">
+					<h3>Forma parte de navicu.com</h3>
+					<button>
+						Incluye tu alojamiento
+					</button>
+				</div>
+			</div>
+			<!--- Address -->
+			<div class="nvc-footer__top--address col-lg-3">
+				<div class="way-one">
+					<img src="/assets/img/Home/footer/ubicacion.svg">
+					<img src="/assets/img/Home/footer/correo.svg">
+					<address>Av. Salvador Feo La Cruz - Torre WTC - 7</address>
+					<address>Naguanagua, Carabobo, VE</address>
+				</div>
+				<hr>
+				<div class="way-two">
+					<p>preguntas@navicu.com</p>
+				</div>
+			</div>
+			<!--- Blog -->
+			<div class="nvc-footer__top--blog col-lg-3">
+				<div class="list">
+					<p> 
+						<img src="/assets/img/Home/footer/moment.svg">
+						<a href="https://www.navicu.com/blog/" target="_blank">Viaja a nuestro blog</a>
+					</p>
+					<ul>
+						<li>
+							<span>+</span>
+							<a href="https://www.navicu.com/blog/carnavales-de-venezuela/" target="_blank">
+								Carnavales de Venezuela
+							</a>
+						</li>
+						<li>
+							<span>+</span>
+							<a href="https://www.navicu.com/blog/ocumare-de-la-costa/" target="_blank">
+								Ocumare de la Costa
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="ssl d-flex">
+					<div class="imgsecutex" id="DigiCertClickID_Tkokhmkl" data-language="en">
+                        <div class="imgsecurity" id="DigiCertClickID_TkokhmklSeal">
+                            <a href="https://ssl.comodo.com/ev-ssl-certificates.php" target="_blank">
+								<img src="/assets/img/Home/footer/comodo_secure.png" alt="DigiCert Seal" tabindex="0">				
+                            </a>
+                        </div>
+                    </div>
+					<p>Seguridad SLL Comod</p>
+				</div>
+			</div>
+			<!--- Suscribete -->
+			<div class="nvc-footer__top--newsletter col-lg-3">
+				<div class="text-infor">
+					<h2>¡Que no se te escapen nuestras ofertas!</h2>
+					<p>Te las contamos por correo</p>
+				</div>
+				<div class="suscribe-form">
+					<div class="funt-form">
+						<form name="formRegister">
+							<img src="/assets/img/Home/footer/email.svg">
+							<input type=""
+							 	   name="" />
+						</form>
+					</div>
+				 	<div class="btn-form">
+				 		<button>
+				 		 Suscribirme  	
+					 	</button>
+						<span id="data" class="data"></span>
+				 	</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="nvc-footer__bottom mx-auto text-center">
+		<div class="nvc-container row no-gutters">
+			<div class="nvc-footer__bottom--copyright col-lg-4">
+	            <h5>
+	            	Términos y condiciones  FAQ
+	            </h5>
+	        </div>
+	        <div class="nvc-footer__bottom--all-right col-lg-4">
+	        	<h5>2014 navicu.com &trade; Todos los derechos reservados</h5>
+	        </div>
+	        <div class="nvc-footer__bottom--redes col-lg-4">
+	        	<a href="https://www.facebook.com/navicu.reservas" target="_blank"><img src="/assets/img/Home/footer/facebook.svg"></a>
+	        	<a href="https://twitter.com/_navicu" target="_blank"><img src="/assets/img/Home/footer/twitter.svg"></a>
+	        	<a href="https://instagram.com/_navicu" target="_blank"><img src="/assets/img/Home/footer/instagram.svg"></a>
+	            <a href="https://www.youtube.com/channel/UCgusN-AvP1nas0qnPji7cLA" target="_blank"><img src="/assets/img/Home/footer/youtube.svg"></a>
+	        	<a href="https://plus.google.com/+NavicuAlojamiento" target="_blank"><img src="/assets/img/Home/footer/google.svg"></a>   	
+	        </div>
+		</div>
+	</div>
+</div>
+<!-- <div (click)="gotoTop()"><p class="text-center mb-0">Aqui va el botn scrollTop</p></div> -->

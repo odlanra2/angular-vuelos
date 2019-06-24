@@ -1,0 +1,163 @@
+
+<div class="d-flex justify-content-center">
+    <div class="col-11">
+        <div class="fare-title">
+            <p class="top">¡Lorem ipsum dolor sit amet, consectetuer!</p>
+            <p class="sub">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sedt diam nonum</p>
+        </div>
+        <div class="flight-detail-top">
+            <p>Detalles de tu vuelo</p>
+        </div>
+        <div class="flight-detail-contet-oneway">
+            <div class="row oneway-roundtrip">
+                <div class="col-md-2 vline">
+                    <div class="div-going">
+                        <p class="top">
+                            <img src="{{src}}/ida.png"><span class="span-round-try">Ida -26 de junio</span></p>
+                    </div>
+                </div>
+                <strong class="hidden-xs-top">|</strong>
+                <div class="col-md-3 vline">
+                    <div class="div-going-top">
+                        <p class="top">06:50 AM</p>
+                        <p class="sub">CCS Caracas - Aeropuerto Int. de Maiquetía</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs-top">|</strong>
+                <div class="col-md-3 vline">
+                    <div class="div-going-top">
+                        <p class="top">08:50 AM</p>
+                        <p class="sub"> BOG Bogotá - Aeropuerto Int. El Dorado</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs-top">|</strong>
+                <div class="col-md-1 vline">
+                    <div class="div-going-top">
+                        <p class="top" style="color:#E29F00">2 horas</p>
+                        <p class="sub">1 conexión</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs-top">|</strong>
+                <div class="col-md-offset-2 vline">
+                    <div class="div-going-top">
+                        <p class="top" style='margin:0 30px;'><img src="{{src}}/laser.png"></p>
+                        <p class="sub" style='margin:0 30px;'>Laser Airlines</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs-top">|</strong>
+                <div class="col-md-offset-2 ">
+                    <div style="margin:0 12px; margin-top:15px">
+                        <p class="top">
+                            <img style="width: 20px;" src="/assets/img/fare-family/Iconos/1 adulto -  detalles de vuelo-09.svg">1 Adulto</p>
+                    </div>
+                </div>
+            </div>
+            <!--fin ida-->
+            <hr style=" border: 0; height: 1px; background:#808080;">
+            <div class="row oneway-roundtrip">
+                <div class="col-md-2 vline">
+                    <div class="div-return">
+                        <p class="top">
+                            <img src="{{src}}/vuelta.png"><span class="span-round-try">Vuelta - 4 Julio</span></p>
+                    </div>
+                </div>
+                <strong class="hidden-xs">|</strong>
+                <div class="col-md-3 vline">
+                    <div class="div-return-botom">
+                        <p class="top">06:10 PM</p>
+                        <p class="sub">BOG Bogotá - Aeropuerto Int. El Dorado</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs">|</strong>
+                <div class="col-md-3 vline">
+                    <div class="div-return-botom">
+                        <p class="top">10:50 PM</p>
+                        <p class="sub">CCS Caracas - Aeropuerto Int. de Maiquetía</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs">|</strong>
+                <div class="col-md-1 vline">
+                    <div class="div-return-botom">
+                        <p class="top" style="color:#E29F00">7 horas</p>
+                        <p class="sub">1 conexión</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs">|</strong>
+                <div class="col-md-offset-2 vline">
+                    <div class="div-return-botom">
+                        <p class="top" style='margin:0 30px;'><img src="{{src}}/laser.png"></p>
+                        <p class="sub" style='margin:0 30px;'>Laser Airlines</p>
+                    </div>
+                </div>
+                <strong class="hidden-xs">|</strong>
+                <div class="col-md-offset-2">
+                    <div style="margin:0 12px; margin-top:-5px">
+                        <p class="top"><img style="width: 20px;" src="/assets/img/fare-family/Iconos/Tarifa.svg"> Tarifa Light</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="flight-detail-bottom"><span>Bs.S 1.134,31</span>
+            <button style="float:right;"> Continuar</button>
+        </div>
+    </div>
+</div>
+
+<!--table fare-family-->
+<div class="d-flex w-100 justify-content-center" style="margin-top:30px; margin-bottom: 60px;">
+    <div class="table-responsive w-75 ">
+        <table class="table-fare " style='background: #F6F6F6'>
+            <thead>
+                <tr>
+                    <th scope="col" style="width: 300px;  border-right:1px solid #dee2e6"></th>
+                    <th scope="col" style="height: 100px;" class="title-light" [ngClass]="{'Active-title-light':FareSelected === 'Light'  }">
+                        <p class="text-center">Light</p>
+                    </th>
+                    <th scope="col" class="title-plus" [ngClass]="{'Active-title-plus':FareSelected === 'Plus'  }">
+                        <p class="text-center">Plus</p>
+                    </th>
+                    <th scope="col" class="title-top" [ngClass]="{'Active-title-top':FareSelected === 'Top'  }">
+                        <p class="text-center">Top</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listfare of listfares">
+                    <th scope="row" class="vline" style="height: 90px;">
+                        <p class="p-list"><span><img style="width: 30px;" src="{{listfare.url}}"></span>{{listfare.title}}</p>
+                        <p class="p-sublist">{{listfare.subtitle}}</p>
+                    </th>
+                    <td class="vline" [ngClass]="{'Active-columns':FareSelected === 'Light'  }">
+                        <p *ngIf="listfare.light.length > 20"><img style="width: 30px; margin:0 100px; margin-top:15px; " src="{{listfare.light}}"></p>
+                        <p class="text-center p-list" *ngIf="listfare.light.length < 20">{{listfare.light}}</p>
+                    </td>
+                    <td class="vline " [ngClass]="{'Active-columns':FareSelected === 'Plus'  }">
+                        <p *ngIf="listfare.plus.length > 20"> <img style="width: 30px; margin:0 100px; margin-top:15px; " src="{{listfare.plus}}"></p>
+                        <p class="text-center p-list" *ngIf="listfare.plus.length < 30"> {{listfare.plus}}</p>
+                        <p class="text-center p-sublist"> {{listfare.subplus}}</p>
+                    </td>
+                    <td class="vertical-line" [ngClass]="{'Active-columns':FareSelected === 'Top'}">
+                        <p *ngIf="listfare.top.length > 20"><img style="width: 30px; margin:0 100px; margin-top:15px; " src="{{listfare.top}}"></p>
+                        <p class="text-center p-list" *ngIf="listfare.top.length < 20">{{listfare.top}}</p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th scope="row" style="height: 90px; border-right:1px solid #dee2e6"></th>
+                    <td style="width: 200px;" [ngClass]="{'Active-columns':FareSelected === 'Light','Atctive-border': FareSelected === 'Light'  }">
+                        <p class="total-light" (click)="FareSelected = 'Light'"><span class="fare-check" [ngClass]="{'Active-fare-check-light':FareSelected === 'Light' }">
+                            </span >Bs.S 1.134,31</p></td>
+                            <td style="width: 200px;  border-right:1px solid #dee2e6" [ngClass]="{'Active-columns':FareSelected === 'Plus','Active-border-plus': FareSelected === 'Plus'}">
+                             <p class="total-plus" (click)="FareSelected = 'Plus'"><span class="fare-check" [ngClass]="{'Active-fare-check-plus':FareSelected === 'Plus'}">
+                            </span>Bs.S 2.434,31</p>
+                    </td>
+                    <td style="width: 200px;" [ngClass]="{'Active-columns':FareSelected === 'Top','Active-border-top': FareSelected === 'Top'}">
+                        <p class="total-top" (click)="FareSelected = 'Top'"><span class="fare-check" [ngClass]="{'Active-fare-check-top':FareSelected === 'Top'}">
+                    </span>Bs.S 5.665,31</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

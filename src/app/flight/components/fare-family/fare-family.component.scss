@@ -1,0 +1,368 @@
+
+.fare-title{
+    .top{
+        font-family:latoBold;
+        font-size:17px;
+        color: #391860;
+        margin-top:20px;
+    }
+    .sub{
+        font-family:latoRegular;
+        font-size:17px;
+        margin-top:-20px;
+    }
+}
+.flight-detail-top{
+    background: #783CBD;
+    color:white;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    padding: 0px;
+    font-family:latoBold;
+    font-size:21px;
+    p{
+        margin:0 10px;
+    }
+
+}
+.flight-detail-contet-oneway{
+    background: #391860;
+    color:#DAC5ED;
+    .top{
+      margin: 0 5px;
+      font-size: 15px; 
+      font-family:LatoSemibold;
+      }
+     .div-going{
+        margin:0 12px;
+        margin-top:20px;
+        color:#E29F00;
+    }
+
+    .div-going-top{
+        margin-top:15px
+    }
+    .div-return{
+        margin:0 12px;
+        color:#E29F00;
+    }
+    .div-return-botom{
+        margin-top:-5px
+    }
+    .span-round-try{
+        margin:0 10px;
+    }
+    .sub{
+      margin: 0 5px;
+      font-size: 15px; 
+      font-family:LatoSemibold;
+      
+}
+    .hidden-xs-top{
+        font-family:latoRegular;
+        font-size: 12px; 
+        color:#D5D1DA;
+        margin-top:18px;
+    }
+
+    .hidden-xs{
+        font-family:latoRegular;
+        font-size: 12px; 
+        color:#D5D1DA;
+       
+    }
+
+    @media (max-width:1759px) {
+        .top{
+            margin: 0 5px;
+            font-size: 11px; 
+            font-family:LatoSemibold;
+            }
+          .sub{
+            margin: 0 5px;
+            font-size: 11px; 
+            font-family:LatoSemibold;
+            }
+      }
+      @media (max-width:1024px) {
+        .top{
+            margin: 0 5px;
+            font-size: 9px; 
+            font-family:LatoSemibold;
+            }
+          .sub{
+            margin: 0 5px;
+            font-size: 9px; 
+            font-family:LatoSemibold;
+            
+        }
+      }
+ }
+/*.oneway-roundtrip{
+    
+}*/
+.flight-detail-bottom{
+    background: #783CBD;
+    color:white;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    height:50px; 
+    font-family:latoBold;
+    font-size:21px;
+    //padding: px;
+    button{
+        height:50px;
+        width: 200px;
+        color:white;
+        background: #E29F00;
+        border:0px;
+        
+        //margin-top: -1px;
+    }
+    span{
+        margin:0 15px;
+    }
+}
+
+//.vline	{  border-right: 1px solid #808080 }
+
+.table-fare {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent; // Reset for nesting within parents with `background-color`.
+    //margin:0 100px;
+  
+    th,
+    td {
+      padding: .75rem;
+      vertical-align: top;
+      
+     // border-top: $table-border-width solid $table-border-color;
+    }
+  
+    thead th {
+      vertical-align: bottom;
+      border-bottom: 1px solid #dee2e6;
+    }
+  
+    tbody + tbody {
+      border-top: 2px solid #dee2e6;
+    }
+  
+    .table {
+      background-color: #F6F6F6;
+    }
+
+    .vline{
+        border-right:1px solid #dee2e6;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .vertical-line{
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .p-light{
+        font-family: latoBold;
+        color:white;
+        font-size: 27px;
+
+    }
+
+    .p-Plus{
+        font-family: latoBold;
+        color:#D82D5D;
+        font-size: 27px;
+
+    }
+     .p-Top{
+        font-family: latoBold;
+        color:#60269E;
+        font-size: 27px;
+  
+     }
+
+    .p-list{
+        font-family: latoBold;
+        font-size:18px;
+        color:#878787;
+        margin-top:16px;
+        
+        span{
+            margin:0 10px;
+        }
+    }
+    .p-sublist{
+        font-family: LatoMedium Italic;
+        font-size:17px;
+        color:#878787;
+        margin:0 50px;
+        margin-top:-25px;
+        
+    }
+
+    .title-light{
+        font-family: latoBold;
+        color:#E29F00;
+        font-size: 27px;
+        border-right:1px solid #dee2e6
+    }
+    .title-plus{
+        font-family: latoBold;
+        color:#D82D5D;
+        font-size: 27px;
+        border-right:1px solid #dee2e6
+    }
+
+    .title-top{
+        font-family: latoBold;
+        color:#60269E;
+        font-size: 27px;
+       
+    }
+    
+   .Active-title-light{
+        background: #E29F00;
+        color:white;
+        border-right:0;
+    }
+    .Active-title-plus{
+        background: #D82D5D;
+        color:white;
+        border-right:0;
+    }
+
+    .Active-title-top{
+        background: #60269E;
+        color:white;
+        border-right:0;
+    }
+
+
+    .Active-columns{
+       background: #EDEDED;
+       border-right:0;
+    }
+
+    .Atctive-border{
+        border-bottom: 3px solid #E29F00;
+    }
+    .Active-border-plus{
+        border-bottom: 3px solid #D82D5D;
+    }
+
+    .Active-border-top{
+        border-bottom: 3px solid #60269E;
+    }
+
+    .fare-check{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 100%;
+        margin: 0 10px -5px;
+        margin-top: 5px;
+        left: 0;
+        border: solid 4px #DADADA;
+        cursor: pointer; 
+    }
+
+    .Active-fare-check-light{
+        background-color: #E29F00;
+        
+    }
+
+    .Active-fare-check-plus{
+        background-color: #D82D5D;
+    }
+
+    .Active-fare-check-top{
+        background-color: #60269E;
+    }
+   
+    .total-light{
+        font-family: latoBold;
+        color:#E29F00;
+        font-size: 19px;
+    }
+    .total-plus{
+        font-family: latoBold;
+        color: #D82D5D;
+        font-size: 19px;
+    }
+
+    .total-top{
+        font-family: latoBold;
+        color: #60269E;
+        font-size: 19px;
+    }
+
+  }
+@media (max-width:1755px) {
+    .table-fare {
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent; // Reset for nesting within parents with `background-color`.
+        // margin:0 70px;
+       
+        .title-light{
+            font-family: latoBold;
+            color:#E29F00;
+            font-size: 20px;
+            border-right:1px solid #dee2e6
+        }
+        .title-plus{
+            font-family: latoBold;
+            color:#D82D5D;
+            font-size: 20px;
+            border-right:1px solid #dee2e6
+        }
+    
+        .title-top{
+            font-family: latoBold;
+            color:#60269E;
+            font-size: 20px;
+           
+        }
+
+        .Active-title-light{
+            background: #E29F00;
+            color:white;
+            border-right:0;
+        }
+        
+        .Active-title-plus{
+            background: #D82D5D;
+            color:white;
+            border-right:0;
+        }
+    
+        .Active-title-top{
+            background: #60269E;
+            color:white;
+            border-right:0;
+        }
+
+        .p-list{
+            font-family: latoBold;
+            font-size:15px;
+            color:#878787;
+            margin-top:16px;
+            span{
+                margin:0 8px;
+            }
+        }
+        .p-sublist{
+            font-family: LatoMedium Italic;
+            font-size:15px;
+            color:#878787;
+            margin:0 45px;
+            margin-top:-25px;
+            
+        }
+    
+  }
+
+}
+
+

@@ -1,0 +1,136 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="search-container">
+            <div class="row">
+                <div *ngIf="submitted && destinyForm.controls.destiny.errors && hotelBtn" class="alert-error d-flex align-items-center">
+                    <span class="error-message" *ngIf="destinyForm.controls.destiny.errors.required">
+                        <img [src]="'assets/img/Home/buscador/marker_error.svg'" width="13">&nbsp;&nbsp;¿A dónde te gustaría ir?&nbsp;&nbsp;
+                            <b>Selecciona tu destino</b>
+                        </span>
+                    <div class="error-triangle"></div>
+                </div>
+                <div *ngIf="submitted && destinyForm.controls.destiny.errors && flightBtn" class="alert-error-flight d-flex align-items-center">
+                    <span class="error-message" *ngIf="destinyForm.controls.destiny.errors.required">
+                            <img [src]="'assets/img/Home/buscador/marker_error.svg'" width="13">&nbsp;&nbsp;¿A dónde te gustaría ir?&nbsp;&nbsp;
+                                <b>Selecciona tu origen y destino</b>
+                            </span>
+                    <div class="error-triangle"></div>
+                </div>
+                <div class="col-lg-6 text-left d-flex align-items-end">
+
+                    <section class="selector-hoteleria" [class.selector-hoteleria]="flightBtn">
+                        <h3 class="search-left">¿A dónde quieres ir?</h3>
+                    </section>
+
+                    <section class="selector-boleteria" [class.selector-boleteria]="hotelBtn">
+                        <div class="radio-select">
+                            <label class="form-check-label" for="exampleRadios1" (click)="isIdaVuelta()" [class.radio-active]="idaVuelta">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                Ida y vuelta<span></span>
+                            </label>
+
+                            <label class="form-check-label" for="exampleRadios2" (click)="isSoloIda()" [class.radio-active]="soloIda">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                Solo ida<span></span>
+                            </label>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="col-lg-6 text-right panel-btn">
+                    <button class="btn btn-search-selection mr-2" (click)="hotelSelection()" [class.btn-active]="hotelBtn">
+                        <img [src]="'/assets/img/Home/buscador/hotel.png'"> Hoteles
+                    </button>
+                    <button class="btn btn-search-selection" (click)="flightSelection()" [class.btn-active]="flightBtn">
+                        <img [src]="'/assets/img/Home/buscador/flight.png'"> Vuelos
+                    </button>
+                </div>
+            </div>
+
+            <section class="hoteleria" [class.hoteleria]="flightBtn">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form [formGroup]="destinyForm" (ngSubmit)="onSubmit()">
+                            <div class="row selection">
+                                <input formControlName="destiny" class="search-input" type="text" placeholder="Escribe aquí tu destino, región o ciudad">
+                            </div>
+                            <div class="row selection">
+                                <div class="col-lg-2 px-0 d-flex align-items-center">
+                                    <img [src]="'/assets/img/Home/buscador/calendar3.svg'" class="search-calendar-img pl-3 pb-1">
+                                    <input #fechaIda class="date-input" container="" type="text" readonly placeholder="Fecha inicio" placement="bottom left" [minDate]="minDate" [maxDate]="maxDate" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', showWeekNumbers:false}" (bsValueChange)="onValueChange($event,'hotel')">
+                                </div>
+                                <div class="col-lg-2 px-0 d-flex align-items-center ">
+                                    <img [src]=" '/assets/img/Home/buscador/calendar3.svg'" class="search-calendar-img pl-3 pb-1 ">
+                                    <input #fechaRegreso class="date-input" container="" readonly type="text " placeholder="Fecha final" [minDate]="minDateReturnRef " [maxDate]="maxDate " [bsValue]="minDateReturn " bsDatepicker placement="bottom left" [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', showWeekNumbers:false} ">
+                                </div>
+                                <div class="col-lg-2 px-0 ">
+                                    <select class="choice-input ">
+                                    <option selected>1 Adulto</option>
+                                    <option *ngFor="let adults of [2,3,4,5,6,7,8,9] ">{{adults}} Adultos</option> 
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 px-0 ">
+                                    <select class="choice-input ">
+                                    <option selected>0 Niños</option>
+                                    <option *ngFor="let child of [2,3,4,5,6,7,8] ">{{child}} Niños</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 px-0 ">
+                                    <select id="room-choice " class="choice-input ">
+                                    <option selected>1 Habitación</option>
+                                    <option *ngFor="let room of [2,3,4,5,6,7,8,9,10] ">{{room}} Habitaciones</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 px-0 ">
+                                    <button type="submit " class="btn search-btn ">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="boleteria" [class.boleteria]="hotelBtn">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form [formGroup]="destinyForm" (ngSubmit)="onSubmit()">
+                            <div class="row selection">
+                                <input formControlName="origin" class="origen-input" type="text" placeholder="Escribe aquí tu origen">
+                                <input formControlName="destiny" class="destino-input" type="text" placeholder="Escribe aquí tu destino">
+                            </div>
+                            <div class="row selection">
+                                <div class="col-lg-3 px-0 d-flex align-items-center">
+                                    <img [src]="'/assets/img/Home/buscador/calendar3.svg'" class="search-calendar-img pl-3 pb-1">
+                                    <input #fechaIdaVuelo class="date-input" container="" type="text" readonly placeholder="Fecha de salida" placement="bottom left" [minDate]="minDate" [maxDate]="maxDate" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', showWeekNumbers:false}"
+                                        (bsValueChange)="onValueChange($event,'flight')">
+                                </div>
+                                <div class="col-lg-3 px-0 d-flex align-items-center ">
+                                    <img [src]=" '/assets/img/Home/buscador/calendar3.svg'" class="search-calendar-img pl-3 pb-1 ">
+                                    <input #fechaRegresoVuelo *ngIf="idaVuelta" container="" class="date-input" readonly type="text" placeholder="Fecha de llegada" [minDate]="minDateReturnRefFlight" [maxDate]="maxDate " [bsValue]="minDateReturnFlight " bsDatepicker placement="bottom left"
+                                        [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', showWeekNumbers:false} ">
+                                    <input #fechaSoloIda *ngIf="soloIda" container="" class="date-input" disabled type="text" placeholder="Fecha de llegada">
+                                </div>
+                                <div class="col-lg-2 px-0 ">
+                                    <select class="choice-input ">
+                                    <option selected>1 Adulto</option>
+                                    <option *ngFor="let adults of [2,3,4,5,6,7,8,9] ">{{adults}} Adultos</option> 
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 px-0 ">
+                                    <select class="choice-input ">
+                                    <option selected>0 Niños</option>
+                                    <option *ngFor="let child of [2,3,4,5,6,7,8] ">{{child}} Niños</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 px-0 ">
+                                    <button type="submit" class="btn search-btn ">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,191 @@
+/*----------------------Datepicker Styles--------------------------*/
+
+.bs-datepicker-container {
+    padding: 0 !important;
+    background-color: #884FE2;
+    font-family: LatoRegular;
+}
+
+.bs-datepicker-body,
+.bs-datepicker-head {
+    background-color: #884FE2 !important;
+    border: none !important;
+}
+
+.bs-datepicker-body {
+    min-width: 250px !important;
+    min-height: auto !important;
+    //width: 215px !important;
+    padding: 10px 10px 5px 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.bs-datepicker-head {
+    width: 250px !important;
+    min-width: 250px !important;
+    height: 60px;
+    padding: 0 10px 10px 10px;
+}
+
+.bs-datepicker-body table td,
+.bs-datepicker-body table th,
+.bs-datepicker-body table.years tr:not(:last-child) td span,
+.bs-datepicker-body table.months td span,
+.bs-datepicker-body table td.disabled span {
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 0 !important;
+}
+
+.bs-datepicker-body table td.disabled span:hover {
+    background-color: #783cbd !important;
+    transition: 0.3s;
+}
+
+.bs-datepicker-body table.months td span {
+    width: 36px;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.bs-datepicker .is-other-month {
+    display: none;
+}
+
+.bs-datepicker-body table.months td {
+    height: 35px !important;
+}
+
+.bs-datepicker-body table.years td span {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.bs-datepicker-body table td span.disabled {
+    color: #62269E !important;
+}
+
+.theme-green .bs-datepicker-body table td span.selected {
+    background-color: #62269E !important;
+    border-color: #9C27B0 !important;
+    font-family: LatoBold !important;
+}
+
+.bs-datepicker {
+    box-shadow: none !important;
+    left: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border: 3px solid #884FE2;
+    margin-top: 5px;
+    // transform: translateX(calc(0%))
+}
+
+.bs-datepicker:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #8f51e4;
+    border-top: 0;
+    position: absolute;
+    top: -10px !important;
+    left: 10px !important
+}
+
+.bs-datepicker-body table td:not(.disabled) span {
+    font-size: 13px;
+}
+
+.bs-datepicker-body table td.is-highlighted:not(.disabled):not(.selected) span,
+.bs-datepicker-body table td span.is-highlighted:not(.disabled):not(.selected) {
+    background-color: #783cbd !important;
+    transition: 0.3s;
+}
+
+.bs-datepicker-body table td span.disabled,
+.bs-datepicker-body table.years tr:not(:last-child) td span,
+.bs-datepicker-body table td:not(.disabled) span {
+    &:hover {
+        background-color: #783cbd !important;
+        transition: 0.3s;
+    }
+}
+
+.bs-datepicker-head button[disabled],
+.bs-datepicker-head button {
+    background-color: transparent;
+    &:hover {
+        background-color: transparent;
+    }
+    &:active {
+        background-color: transparent;
+    }
+}
+
+.bs-datepicker-body table {
+    border-spacing: 0 0 !important;
+    width: 100% !important;
+}
+
+.bs-datepicker-body table.days span {
+    width: 24px !important;
+    height: 24px !important;
+    line-height: 24px !important;
+}
+
+.bs-datepicker-head button.current {
+    position: inherit;
+    float: left;
+    font-size: 16px;
+}
+
+.bs-datepicker-head button.previous {
+    float: left;
+}
+
+.bs-datepicker-head button.next span,
+.bs-datepicker-head button.previous span {
+    color: #EDA900;
+}
+
+.bs-datepicker-head button.next,
+.bs-datepicker-head button.previous {
+    width: 5px;
+}
+
+.bs-datepicker-head {
+    font-family: LatoRegular;
+    button:nth-child(1),
+    button:nth-child(4) {
+        padding-top: 10px;
+        padding-right: 15px;
+    }
+    button:nth-child(2) {
+        top: 30px;
+        left: 24px;
+        position: absolute;
+    }
+    button:nth-child(3) {
+        position: absolute;
+        left: 20px;
+        padding-top: 10px;
+        font-family: LatoBold !important;
+    }
+}
+
+
+/*Despliegue de Meses y años*/
+
+.bs-datepicker-head button:nth-child(3) {
+    padding-right: 10px;
+    position: inherit;
+}
+
+.bs-datepicker-head button:nth-child(1) {
+    padding-top: 10px;
+}

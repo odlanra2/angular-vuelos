@@ -1,0 +1,33 @@
+<div class="p-5" >
+    <p>
+        ¡Ya estás cerca de terminar el proceso de compra!
+        Necesitamos que nos indiques algunos detalles para confirmar la compra de tu boleto
+    </p>
+    
+    <div class=" d-flex w-60 bg-light">
+        <div class="w-75 bg-info" >
+            
+            <div class="bg-warning" >
+                datos de los pasajeros
+            </div>
+
+            <hr>
+
+            <div class="bg-success" >
+                <router-outlet></router-outlet>
+            </div>
+
+        </div>
+        <div class="w-40 bg-dark" >
+            <div class="bg-nvc-morado" >
+                resuman de vuelo
+            </div>
+            <div class="bg-nvc-magenta">
+                resumen de pago
+            </div>
+            <div class=" mt-1">
+                <button class="w-100 cursor bg-nvc-violeta rounded border-0 text-white p-2" > comprar por BsS 44.903,27</button>
+            </div>
+        </div>
+    </div>
+</div>
